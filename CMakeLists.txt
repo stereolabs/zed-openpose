@@ -5,6 +5,7 @@ PROJECT(${execName})
 if(COMMAND cmake_policy)
 	cmake_policy(SET CMP0003 OLD)
 	cmake_policy(SET CMP0015 OLD)
+	cmake_policy(SET CMP0072 NEW)
 endif(COMMAND cmake_policy)
 
 SET(EXECUTABLE_OUTPUT_PATH ".")
@@ -46,7 +47,7 @@ target_link_libraries(${execName}
                         ${OpenPose_LIBS} ${GLOG_LIBRARY} ${GFLAGS_LIBRARY} ${Caffe_LIBS}
                         ${ZED_LIBRARIES}
                         ${GLUT_LIBRARY}
-                        ${GLEW_LIBRARY}
+                        ${GLEW_LIBRARIES}
                         ${SPECIAL_OS_LIBS}
                         ${OPENGL_LIBRARIES}
                         ${OpenCV_LIBRARIES}
