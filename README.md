@@ -86,3 +86,6 @@ Example :
 - This sample was only tested on Linux but should be easy to run on Windows.
 - This sample requires both Openpose and the ZED SDK which are heavily relying on the GPU.
 - Only the body keypoints are currently used, however we could imagine doing the same for hand and facial keypoints, though the precision required might be a limiting factor.
+
+## Support
+If you need assistance go to our Community site at https://community.stereolabs.com/
