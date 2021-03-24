@@ -432,9 +432,10 @@ void run() {
     sl::Mat img_buffer, depth_img_buffer, depth_buffer, depth_buffer2;
     op::Array<float> outputArray, outputArray2;
     cv::Mat inputImage, depthImage, inputImageRGBA, outputImage;
+    float netInputResolutionDynamicBehavior = 0.0f; // no mNetInputResolutionDynamicBehavior behavior
 
     // ---- OPENPOSE INIT (io data + renderer) ----
-    op::ScaleAndSizeExtractor scaleAndSizeExtractor(netInputSize, outputSize, FLAGS_scale_number, FLAGS_scale_gap);
+    op::ScaleAndSizeExtractor scaleAndSizeExtractor(netInputSize, netInputResolutionDynamicBehavior, outputSize, FLAGS_scale_number, FLAGS_scale_gap);
     op::CvMatToOpInput cvMatToOpInput;
     op::CvMatToOpOutput cvMatToOpOutput;
 
